@@ -224,3 +224,33 @@ class VolumeCalculator
     }
 }
 ```
+```cs
+using System;
+
+namespace Program5
+{
+    internal class Program
+    {
+        
+        
+        static void Main(string[] args)
+        {
+            int[] arr = new int[] { 5, 4, 3, 2, 1 };
+            Array.Sort(arr);
+            Console.WriteLine("Increasing order : ");
+            foreach (int i in arr)
+            {
+                Console.WriteLine(i);
+            }
+
+            Array.Reverse(arr);
+            Console.WriteLine("Decreasing order : ");
+            foreach(int i in arr)
+            {
+                Console.WriteLine(i);
+            }
+        }
+    }
+}
+
+```
