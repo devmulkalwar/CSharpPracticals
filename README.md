@@ -1,3 +1,5 @@
+# Program 1
+## Write a program in Console application in c# to check whether given number is prime or not.
 ```cs
 using System;
 
@@ -30,6 +32,9 @@ public class HelloWorld
     }
 }
 ```
+---
+# Program 2
+## Write a program in Console application in c# to check whether given number is armstrong number or not.
 ```cs
 using System;
 
@@ -78,6 +83,10 @@ public class HelloWorld
     }
 }
 ```
+---
+#Program 3
+## Write a program in Console application in c# to demonstrate the difference between prefix and postfix forms of  ++.
+
 ```cs
 using System;
 
@@ -113,6 +122,16 @@ public class PrePostDemo
     }
 }
 ```
+---
+# Program 4
+## Write a program in Console application in c# to draw the structure (CO2)
+⭐ <br>
+⭐⭐<br>
+⭐⭐⭐<br>
+⭐⭐⭐⭐<br>
+⭐⭐⭐⭐⭐
+
+## 
 ```cs
 using System;
 
@@ -136,6 +155,10 @@ public class HelloWorld
     }
 }
 ```
+---
+# Program 5
+## Write a program in Console application in c# to demonstrate passing  structure to function
+### I)Pass by value       
 ```cs
 using System;
 using System.Collections.Generic;
@@ -163,6 +186,7 @@ namespace Practical5
 }
 
 ```
+### II)Pass by reference  
 ```cs
 using System;
 using System.Collections.Generic;
@@ -187,6 +211,9 @@ static void Main(string[] args)
     Console.WriteLine(std1.StudentName);
 }
 ```
+---
+# Program 6
+## Write a program in Console application in c# to calculate volume of cube, cylinder and square box by using concept of method function overloading 
 ```cs
 using System;
 
@@ -224,6 +251,9 @@ class VolumeCalculator
     }
 }
 ```
+---
+# Program 7
+## Write a program in Console application in C# to sort the list of numbers using an array.
 ```cs
 using System;
 
@@ -254,3 +284,287 @@ namespace Program5
 }
 
 ```
+---
+# Program 8
+## Write a program in Console application in c# to illustrate the concept of method overriding
+```cs
+using System;
+
+class baseClass {
+
+	// show() is 'virtual' here
+	public virtual void show()
+	{
+		Console.WriteLine("Base class");
+	}
+}
+class derived : baseClass
+{
+	
+	//'show()' is 'override' here
+	public override void show()
+	{
+		Console.WriteLine("Derived class");
+	}
+}
+
+class GFG {
+	// Main Method
+	public static void Main()
+	{
+		baseClass obj;
+
+		// 'obj' is the object
+		// of class 'baseClass'
+		obj = new baseClass();
+		
+		// it invokes 'show()'
+		// of class 'baseClass'
+		obj.show();
+	
+	// the same object 'obj' is now
+		// the object of class 'derived'
+		obj = new derived();
+		
+		// it invokes 'show()' of class 'derived'
+		// 'show()' of class 'derived' is overridden
+		// for 'override' modifier
+		obj.show();
+		
+	}
+}
+```
+---
+# Program 9
+## Write a program in Console application in c# to use multiple implementations of an interface
+```cs
+using System;
+
+class baseClass {
+
+	// show() is 'virtual' here
+	public virtual void show()
+	{
+		Console.WriteLine("Base class");
+	}
+}
+class derived : baseClass
+{
+	
+	//'show()' is 'override' here
+	public override void show()
+	{
+		Console.WriteLine("Derived class");
+	}
+}
+
+class GFG {
+	// Main Method
+	public static void Main()
+	{
+		baseClass obj;
+
+		// 'obj' is the object
+		// of class 'baseClass'
+		obj = new baseClass();
+		
+		// it invokes 'show()'
+		// of class 'baseClass'
+		obj.show();
+	
+	// the same object 'obj' is now
+		// the object of class 'derived'
+		obj = new derived();
+		
+		// it invokes 'show()' of class 'derived'
+		// 'show()' of class 'derived' is overridden
+		// for 'override' modifier
+		obj.show();
+		
+	}
+}
+```
+---
+# Program 10
+## Write a program in Console application in c# to demonstrate jagged array.
+```cs
+using System;
+
+class GFG {
+	
+	// Main Method
+	public static void Main()
+	{
+		
+		// Declare the Jagged Array of four elements:
+		int[][] jagged_arr = new int[4][];
+
+		// Initialize the elements
+		jagged_arr[0] = new int[] {1, 2, 3, 4};
+		jagged_arr[1] = new int[] {11, 34, 67};
+		jagged_arr[2] = new int[] {89, 23};
+		jagged_arr[3] = new int[] {0, 45, 78, 53, 99};
+
+		// Display the array elements:
+		for (int n = 0; n < jagged_arr.Length; n++) {
+
+			// Print the row number
+			System.Console.Write("Row({0}): ", n);
+
+			for (int k = 0; k < jagged_arr[n].Length; k++) {
+
+				// Print the elements in the row
+				System.Console.Write("{0} ", jagged_arr[n][k]);
+			}
+			System.Console.WriteLine();
+		}
+	}
+}
+```
+---
+# Program 11
+## Write a program in Console application in c# for boxing and unboxing
+### Boxing
+```cs
+using System;
+class GFG {
+
+	// Main Method
+	static public void Main()
+	{
+
+		// assigned int value
+		// 2020 to num
+		int num = 2020;
+
+		// boxing
+		object obj = num;
+
+		// value of num to be change
+		num = 100;
+
+		System.Console.WriteLine
+		("Value - type value of num is : {0}", num);
+		System.Console.WriteLine
+		("Object - type value of obj is : {0}", obj);
+	}
+}
+```
+### Unboxing
+```cs
+using System;
+class GFG {
+	// Main Method
+	static public void Main()
+	{
+		// assigned int value
+		// 23 to num
+		int num = 23;
+		// boxing
+		object obj = num;
+
+		// unboxing
+		int i = (int)obj;
+
+		// Display result
+		Console.WriteLine("Value of ob object is : " + obj);
+		Console.WriteLine("Value of i is : " + i);
+	}
+}
+```
+---
+# Program 12
+## Write a program in Console application in c# how to implement delegates
+```cs
+using System;
+namespace GeeksForGeeks {
+	
+// declare class "Geeks"
+class Geeks {
+	
+// Declaring the delegates
+// Here return type and parameter type should
+// be same as the return type and parameter type
+// of the two methods
+// "addnum" and "subnum" are two delegate names
+public delegate void addnum(int a, int b);
+public delegate void subnum(int a, int b);
+	
+	// method "sum"
+	public void sum(int a, int b)
+	{
+		Console.WriteLine("(100 + 40) = {0}", a + b);
+	}
+
+	// method "subtract"
+	public void subtract(int a, int b)
+	{
+		Console.WriteLine("(100 - 60) = {0}", a - b);
+	}
+
+// Main Method
+public static void Main(String []args)
+{
+	
+	// creating object "obj" of class "Geeks"
+	Geeks obj = new Geeks();
+	addnum del_obj1 = new addnum(obj.sum);
+	subnum del_obj2 = new subnum(obj.subtract);
+
+	// pass the values to the methods by delegate object
+	del_obj1(100, 40);
+	del_obj2(100, 60);
+
+	// These can be written as using
+	// "Invoke" method
+	// del_obj1.Invoke(100, 40);
+	// del_obj2.Invoke(100, 60);
+             }
+       }
+}
+```
+---
+## Program 13 
+### Design a windows form in c# to calculate addition, subtraction, multiplication, division of two numbers
+```cs
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+
+namespace MyWinApp
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            lblResult.Text = (Convert.ToInt32(txtInput1.Text) + Convert.ToInt32(txtInput2.Text)).ToString();
+        }
+
+        private void btnSub_Click(object sender, EventArgs e)
+        {
+            lblResult.Text = (Convert.ToInt32(txtInput1.Text) - Convert.ToInt32(txtInput2.Text)).ToString();
+        }
+
+        private void btnMul_Click(object sender, EventArgs e)
+        {
+            lblResult.Text = (Convert.ToInt32(txtInput1.Text) * Convert.ToInt32(txtInput2.Text)).ToString();
+        }
+
+        private void btnDiv_Click(object sender, EventArgs e)
+        {
+            lblResult.Text = (Convert.ToInt32(txtInput1.Text) / Convert.ToInt32(txtInput2.Text)).ToString();
+        }       
+    }
+}
+```
+---
