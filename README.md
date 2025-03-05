@@ -365,48 +365,72 @@ class GFG {
 ```cs
 using System;
 
-class baseClass {
-
-	// show() is 'virtual' here
-	public virtual void show()
-	{
-		Console.WriteLine("Base class");
-	}
-}
-class derived : baseClass
+// Creating interfaces
+interface firstinterface
 {
 	
-	//'show()' is 'override' here
-	public override void show()
+	// Declaring Method
+	void myfun1();
+}
+
+interface secondinterface
+{
+	
+	// Declaring Method
+	void myfun2();
+}
+
+interface thirdinterface
+{
+	
+	// Declaring Method
+	void myfun3();
+}
+
+// Here Int_Class implements three interfaces
+class Int_Class : firstinterface, secondinterface, thirdinterface
+{
+	
+	// Definition of Method
+	public void myfun1()
 	{
-		Console.WriteLine("Derived class");
+		Console.WriteLine("Hello! i am method of firstinterface");
+	}
+	
+	// Definition of Method
+	public void myfun2()
+	{
+		Console.WriteLine("Hello! i am method of secondinterface");
+	}
+	
+	// Definition of Method
+	public void myfun3()
+	{
+		Console.WriteLine("Hello! i am method of thirdinterface");
 	}
 }
 
-class GFG {
-	// Main Method
-	public static void Main()
-	{
-		baseClass obj;
+class GFG{
 
-		// 'obj' is the object
-		// of class 'baseClass'
-		obj = new baseClass();
-		
-		// it invokes 'show()'
-		// of class 'baseClass'
-		obj.show();
+// Driver code
+public static void Main(String[] args)
+{
 	
-	// the same object 'obj' is now
-		// the object of class 'derived'
-		obj = new derived();
-		
-		// it invokes 'show()' of class 'derived'
-		// 'show()' of class 'derived' is overridden
-		// for 'override' modifier
-		obj.show();
-		
-	}
+	// Creating the objects of Int_Class class
+	firstinterface obj1;
+	secondinterface obj2;
+	thirdinterface obj3;
+	
+	obj1 = new Int_Class();
+	obj2 = new Int_Class();
+	obj3 = new Int_Class();
+	
+	// Call the methods from firstinterface,
+	// secondinterface, and thirdinterface
+	obj1.myfun1();
+	obj2.myfun2();
+	obj3.myfun3();
+}
 }
 ```
 ---
